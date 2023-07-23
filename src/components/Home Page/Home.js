@@ -10,12 +10,12 @@ const Home = () => {
                 <div
                     className='text-center flex flex-col justify-center xl:pt-10 xl:text-left h-full container mx-auto'>
                     <h1 className='h1'>
-                        Hey there 👋 I&apos;m Daniel <br/>{' '}
+                        {/*Hey there 👋 I&apos;m Daniel <br/>{' '}*/}
                         <span className='text-accent'>a Full Stack Developer</span>
                     </h1>
                     <p className='max-w-sm xl:max-w-xl xl:max-0 mx-auto xl:mx-0 mb-10 xl:mb-16'>
                         Highly skilled and talented individual proficient in crafting web magic. Specializes in
-                        building seamless applications using React, NodeJS, and Next.Js. Let&apos;s collaborate to bring your
+                        {/*building seamless applications using React, NodeJS, and Next.Js. Let&apos;s collaborate to bring your*/}
                         ideas to life and create extraordinary online experiences together! Seeking new work
                         opportunities. ✨
                     </p>

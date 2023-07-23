@@ -1,5 +1,6 @@
 import {FaEnvelope, FaGithub, FaLinkedinIn, FaPhoneAlt, FaWhatsapp} from "react-icons/fa";
 import Link from "next/link";
+import {Fragment} from "react";
 
 const social = [
   { title: 'linkedin.com/in/danielmaximov', uri: 'https://www.linkedin.com/in/danielmaximov', icon: <FaLinkedinIn /> },
@@ -13,7 +14,9 @@ const Socials = () => {
   return <div className='flex items-center gap-x-5 text-lg'>
     {
       social.map((item , index) => {
-        return <Link key={index} target='_blank' href={item.uri} className='hover:text-accent transition-all duration-300'>{item.icon}</Link>
+        return <Fragment key={index}>
+          <Link target='_blank' href={item.uri} className='hover:text-accent transition-all duration-300'>{item.icon}</Link>
+        </Fragment>
       })
     }
   </div>;

@@ -6,7 +6,7 @@ const Button = (props) => {
     return (
         <button
             {...props}
-            className="bg-accent hover:bg-accent/60 text-customBlue font-bold py-1 px-2 rounded inline-flex items-center">
+            className="text-accent font-semibold flex items-center w-[100%]">
             <spna>{icon}</spna>
             <span className='pl-1'>{children}</span>
         </button>

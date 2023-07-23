@@ -1,5 +1,5 @@
 'use client'
-import {HiEnvelope, HiViewColumns} from "react-icons/hi2";
+import { HiViewColumns} from "react-icons/hi2";
 import {HiHome, HiUser} from "react-icons/hi";
 import {usePathname} from "next/navigation";
 import Link from "next/link";
@@ -8,11 +8,6 @@ const links = [
     {name: 'home', path: '/', icon: <HiHome/>},
     {name: 'about', path: '/about', icon: <HiUser/>},
     {name: 'projects', path: '/projects', icon: <HiViewColumns/>},
-    {
-        name: 'contact',
-        path: '/contact',
-        icon: <HiEnvelope/>,
-    },
 ];
 
 const Nav = () => {

@@ -31,8 +31,10 @@ const projects = [
         name: 'title2',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et\n' +
             '                    perferendis eaque, exercitationem praesentium nihil.',
-        tech: [{name: 'Next.Js', icon: <SiNextdotjs/>}, {name: 'MongoDB',
-            icon: <SiMongodb/>}],
+        tech: [{name: 'Next.Js', icon: <SiNextdotjs/>}, {
+            name: 'MongoDB',
+            icon: <SiMongodb/>
+        }],
         pic: '/thumb2.jpg',
         git: '',
         download: ''
@@ -41,8 +43,10 @@ const projects = [
         name: 'title3',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et\n' +
             '                    perferendis eaque, exercitationem praesentium nihil.',
-        tech: [{name: 'Next.Js', icon: <SiNextdotjs/>}, {name: 'MongoDB',
-            icon: <SiMongodb/>}],
+        tech: [{name: 'Next.Js', icon: <SiNextdotjs/>}, {
+            name: 'MongoDB',
+            icon: <SiMongodb/>
+        }],
         pic: '/thumb3.jpg',
         git: '',
         download: ''
@@ -53,22 +57,23 @@ const Projects = () => {
     return (
         <div className='h-full bg-primary/30 py-36 flex items-center'>
             <Circles/>
-                <div className='container mx-auto mt-40 md:mt0'>
-                    <div className='flex flex-col xl:flex-row gap-x-8 '>
-                        <div className='text-accent flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 '>
-                            <h2 className='h2 xl:mt-8 text-white'>My Projects <span className='text-accent'>.</span></h2>
-                            <p className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim semper urna at
-                                tincidunt. Nunc risus augue, cursus non laoreet ac, elementum ut augue.
-                            </p>
-                        </div>
-                        <div className='flex flex-col w-full xl:max-w-[60%] h-[480px]'>
-                       <div className='w-full z-10'>
-                           <ProjectsSlider data={projects}/>
-                       </div>
+            <div className='container mx-auto mt-20 md:mt0'>
+                <div className='flex flex-col xl:flex-row gap-x-8 '>
+                    <div className='text-accent flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 '>
+                        <h2 className='h2 xl:mt-8 text-center text-white'>My Projects <span className='text-accent'>.</span></h2>
+                        <p className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
+                            Mastering React, Redux, Node.Js, Express.JS, and MongoDB, I crafted dynamic web solutions.
+                            Additionally, I excelled in real-time object detection using OpenCV, showcasing my passion
+                            for innovation and enhancing user experiences.
+                        </p>
+                    </div>
+                    <div className='flex flex-col w-full xl:max-w-[60%] h-[480px]'>
+                        <div className='w-full z-10'>
+                            <ProjectsSlider data={projects}/>
                         </div>
                     </div>
                 </div>
+            </div>
             <Bulb/>
         </div>
     )

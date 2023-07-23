@@ -10,8 +10,6 @@ import {MdPreview} from "react-icons/md";
 
 
 const ProjectCard = ({data}) => {
-
-
     return (
         <div className='max-w-[100%] md:max-h-[100%] bg-customBlue/50 rounded overflow-hidden shadow-lg'>
             <div className='flex md:block md:justify-center'>

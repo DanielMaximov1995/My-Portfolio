@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Circles from "@/components/Circles";
 import Avatar from "@/components/Avatar";
 import Skills from "@/components/skills";
@@ -12,16 +12,16 @@ const About = () => {
 
     return (
         <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
-            <Circles/>
+            <Circles />
             <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
                 <div className='flex-1 flex flex-col justify-center'>
                     <h2 className='h2 mt-0 md:mt-auto'>
-                        Tech Enthusiast 🧑‍💻 <br className='hidden md:block'/> Master of <span className='text-accent'>Full-Stack</span>
+                        Tech Enthusiast 🧑‍💻 <br className='hidden md:block' /> Master of <span className='text-accent'>Full-Stack</span>
                     </h2>
                     <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
                         As an enthusiastic tech developer, I take pride in my impressive portfolio of <span className='text-accent font-semibold'>11 Full-Stack
-                        projects. </span>
-                        Proficient in <span className='text-accent font-semibold'>React.js, Next.Js, NodeJS, and Python,</span> I'm passionate about writing
+                        projects.</span>
+                        Proficient in <span className='text-accent font-semibold'>React.js, Next.Js, NodeJS, and Python,</span> I&apos;m passionate about writing
                         clean code.
                     </p>
                 </div>
@@ -40,8 +40,8 @@ const About = () => {
                         }
                     </div>
                     <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
-                        {index === 0 && <Skills/>}
-                        {index === 1 && <Education/>}
+                        {index === 0 && <Skills />}
+                        {index === 1 && <Education />}
                     </div>
                 </div>
             </div>

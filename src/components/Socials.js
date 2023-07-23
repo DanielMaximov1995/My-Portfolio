@@ -13,7 +13,7 @@ const Socials = () => {
   return <div className='flex items-center gap-x-5 text-lg'>
     {
       social.map((item , index) => {
-        return <Link target='_blank' href={item.uri} className='hover:text-accent transition-all duration-300'>{item.icon}</Link>
+        return <Link key={index} target='_blank' href={item.uri} className='hover:text-accent transition-all duration-300'>{item.icon}</Link>
       })
     }
   </div>;

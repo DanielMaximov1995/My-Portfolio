@@ -21,7 +21,7 @@ const About = () => {
                     <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
                         As an enthusiastic tech developer, I take pride in my impressive portfolio of <span className='text-accent font-semibold'>11 Full-Stack
                         projects.</span>
-                        {/*Proficient in <span className='text-accent font-semibold'>React.js, Next.Js, NodeJS, and Python,</span> I&apos;m passionate about writing*/}
+                        Proficient in <span className='text-accent font-semibold'>React.js, Next.Js, NodeJS, and Python,</span> I&apos;m passionate about writing
                         clean code.
                     </p>
                 </div>

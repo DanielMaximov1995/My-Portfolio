@@ -4,7 +4,7 @@ import TopLeftImg from "@/components/TopLeftImg";
 
 const Layout = ({children}) => {
   return (
-      <div className={'page bg-site text-white bg-cover bg-no-repeat relative md:z-10'} style={{ backgroundAttachment: 'fixed' }}>
+      <div className={'md:page bg-site text-white bg-cover bg-no-repeat relative md:z-10'}>
         <Nav />
         <Header />
         <TopLeftImg />

@@ -11,7 +11,7 @@ const About = () => {
     const [index, setIndex] = useState(0);
 
     return (
-        <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
+        <div className='h-full bg-primary/30 md:py-36 pt-36 text-center xl:text-left'>
             <Circles />
             <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
                 <div className='flex-1 flex flex-col justify-center'>

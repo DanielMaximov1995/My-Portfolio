@@ -9,8 +9,6 @@ import ProjectsSlider from "@/components/ProjectsSlider";
 import Skills from "@/components/skills";
 import Education from "@/components/education";
 
-const langData = ['All', 'Web & App', 'Python']
-
 const projects = [
     {
         name: 'title1',
@@ -55,26 +53,27 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className='h-full bg-primary/30 py-36 flex items-center'>
+        <div className='h-full bg-primary/30 md:py-36 pt-36 text-center xl:text-left'>
             <Circles/>
-            <div className='container mx-auto mt-20 md:mt0'>
-                <div className='flex flex-col xl:flex-row gap-x-8 '>
-                    <div className='text-accent flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 '>
-                        <h2 className='h2 xl:mt-8 text-center text-white'>My Projects <span className='text-accent'>.</span></h2>
-                        <p className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
-                            Mastering React, Redux, Node.Js, Express.JS, and MongoDB, I crafted dynamic web solutions.
-                            Additionally, I excelled in real-time object detection using OpenCV, showcasing my passion
-                            for innovation and enhancing user experiences.
-                        </p>
-                    </div>
-                    <div className='flex flex-col w-full xl:max-w-[60%] h-[480px]'>
+            <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
+                <div className='flex-1 flex flex-col justify-center'>
+                    <h2 className='h2 md:mt-0 mt-4 md:mt-auto'>
+                        My Projects <span className='text-accent'>.</span>
+                    </h2>
+                    <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
+                        Mastering React, Redux, Node.Js, Express.JS, and MongoDB, I crafted dynamic web solutions.
+                        Additionally, I excelled in real-time object detection using OpenCV, showcasing my passion
+                        for innovation and enhancing user experiences.
+                    </p>
+                </div>
+                <div className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
+                    <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
                         <div className='w-full z-10'>
                             <ProjectsSlider data={projects}/>
                         </div>
                     </div>
                 </div>
             </div>
-            <Bulb/>
         </div>
     )
 }

@@ -4,11 +4,13 @@ import Avatar from "@/components/Avatar";
 import Link from "next/link";
 
 const Home = () => {
+
+
     return (
-        <div className='h-full'>
+        <div className='h-full md:py-36 '>
             <div className='w-full h-full'>
                 <div
-                    className='text-center flex flex-col justify-center xl:pt-10 xl:text-left h-full container mx-auto'>
+                    className='text-center flex flex-col justify-center xl:pt-10 xl:text-left h-screen md:h-full container mx-auto'>
                     <h1 className='h1'>
                         Hey there 👋 I&apos;m Daniel <br/>{' '}
                         <span className='text-accent'>a Full Stack Developer</span>
@@ -26,12 +28,12 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-[1200px] h-full absolute right-0 bottom-0 -z-10'>
+            <div className='w-[1200px] hidden md:block md:h-full absolute right-0 bottom-0 -z-10'>
                 <div
                     className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 '>
                 </div>
             </div>
-            <div className='w-full h-full max-w-[737px] max-h-[678px] absolute -bottom32 lg:bottom-0 lg:right-[8%] -z-10'>
+            <div className='w-full h-full hidden md:block max-w-[737px] max-h-[678px] absolute -bottom32 lg:bottom-0 lg:right-[8%] -z-10'>
                 <Avatar/>
             </div>
         </div>

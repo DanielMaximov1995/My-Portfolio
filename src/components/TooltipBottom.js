@@ -12,7 +12,7 @@ const TooltipBottom = ({ content, title, position }) => {
             onMouseLeave={() => setShowTooltip(false)}
         >
       <span className="text-2xl xl:text-3xl w-1/3 hover:text-accent transition-all duration-300">
-        {content}
+          {content}
       </span>
             {showTooltip && (
                 <span

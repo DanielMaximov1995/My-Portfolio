@@ -5,7 +5,6 @@ import TooltipBottom from "@/components/TooltipBottom";
 import {SiGithub} from "react-icons/si";
 import {AiOutlineCloudDownload} from "react-icons/ai";
 import Button from "@/components/Button";
-import {useState} from "react";
 import {MdPreview} from "react-icons/md";
 
 
@@ -35,8 +34,8 @@ const ProjectCard = ({data}) => {
                         })}
                     </div>
 
-                    <div className='flex justify-end'>
-                        <div className='pt-4 inline-flex md:flex md:px-2 gap-2'>
+                    <div className='flex justify-end md:justify-around'>
+                        <div className='pt-4 inline-flex md:flex md:px-4 gap-2'>
                             <Button icon={<MdPreview />}>Preview</Button>
                             <Button icon={<AiOutlineCloudDownload />}>Download</Button>
                         </div>

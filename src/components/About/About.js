@@ -7,7 +7,8 @@ import Education from "@/components/education";
 
 const aboutData = ['skills', 'education']
 
-const About = () => {
+const About = (props) => {
+    const {skills , education} = props
     const [index, setIndex] = useState(0);
 
     return (
@@ -40,8 +41,8 @@ const About = () => {
                         }
                     </div>
                     <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
-                        {index === 0 && <Skills />}
-                        {index === 1 && <Education />}
+                        {index === 0 && <Skills skills={skills}/>}
+                        {index === 1 && <Education education={education}/>}
                     </div>
                 </div>
             </div>

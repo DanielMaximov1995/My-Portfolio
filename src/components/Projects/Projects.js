@@ -6,10 +6,9 @@ import React, {useState} from "react";
 import {SiExpress, SiMongodb, SiNextdotjs, SiReact} from "react-icons/si";
 import {FaNode} from "react-icons/fa";
 import ProjectsSlider from "@/components/ProjectsSlider";
-import Skills from "@/components/skills";
-import Education from "@/components/education";
+import { techSkills} from "@/components/Technologys";
 
-const projects = [
+const projectsData = [
     {
         name: 'title1',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et\n' +
@@ -51,7 +50,9 @@ const projects = [
     },
 ]
 
-const Projects = () => {
+const Projects = (props) => {
+    const { projects } = props
+
     return (
         <div className='h-full bg-primary/30 md:py-36 pt-36 text-center xl:text-left'>
             <Circles/>
@@ -66,10 +67,10 @@ const Projects = () => {
                         for innovation and enhancing user experiences.
                     </p>
                 </div>
-                <div className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
+                <div className='flex flex-col w-full xl:max-w-[65%] h-[480px]'>
                     <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
                         <div className='w-full z-10'>
-                            <ProjectsSlider data={projects}/>
+                            <ProjectsSlider data={projectsData}/>
                         </div>
                     </div>
                 </div>

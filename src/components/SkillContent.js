@@ -1,6 +1,7 @@
 'use client'
-
+import { theme } from '../../tailwind.config'
 import TooltipBottom from "@/components/TooltipBottom";
+import Icon from "@/components/Icon";
 
 const SkillContent = (props) => {
     const { setIndex , index , indexComp , title , data } = props
@@ -20,10 +21,15 @@ const SkillContent = (props) => {
                 onMouseEnter={() => setIndex(indexComp)}
                 onMouseLeave={() => setIndex(null)}
             >
-                {data.map((frontSkill, frontIndex) => {
-                    return <div key={frontIndex}>
-                        <TooltipBottom title={frontSkill.name} content={frontSkill.icon}/>
+                {data.map((techSkill, techIndex) => {
+                    let icon = <div className='h-6 w-6 hover:text-accent'>
+                        <Icon icon={techSkill.icon}/>
                     </div>
+                    return (
+                        <div key={techIndex}>
+                            <TooltipBottom title={techSkill.name} content={icon} className='text-accent'/>
+                        </div>
+                    );
                 })}
             </div>
         </div>

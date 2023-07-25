@@ -1,31 +1,36 @@
 import {
     SiBootstrap,
     SiCss3,
-    SiExpress, SiFirebase,
+    SiExpress, SiFirebase, SiGooglecloud,
     SiHtml5,
     SiJavascript,
     SiMongodb,
     SiMui, SiMysql,
-    SiNextdotjs,
-    SiReact, SiSocketdotio,
+    SiNextdotjs, SiPython,
+    SiReact, SiRedux, SiSocketdotio,
     SiTailwindcss
 } from "react-icons/si";
 import {FaNode} from "react-icons/fa";
 
 export const techSkills = [
-    {_type: "inline", name: 'React.Js', icon: <SiReact/>},
-    {_type: "inline", name: 'Next.js', icon: <SiNextdotjs/>},
-    {_type: "inline", name: 'JavaScript', icon: <SiJavascript/>},
-    {_type: "inline", name: 'HTML', icon: <SiHtml5/>},
-    {_type: "inline", name: 'CSS', icon: <SiCss3/>},
-    {_type: "inline", name: 'Tailwind', icon: <SiTailwindcss/>},
-    {_type: "inline", name: 'Material-UI', icon: <SiMui/>},
-    {_type: "inline", name: 'Bootstrap', icon: <SiBootstrap/>},
-    {_type: "inline", name: 'Next.js', icon: <SiNextdotjs/>},
-    {_type: "inline", name: 'Node.Js', icon: <FaNode/>},
-    {_type: "inline", name: 'Express.Js', icon: <SiExpress/>},
-    {_type: "inline", name: 'Socket.IO', icon: <SiSocketdotio/>},
-    {_type: "inline", name: 'MongoDB', icon: <SiMongodb/>},
-    {_type: "inline", name: 'MySQL', icon: <SiMysql/>},
-    {_type: "inline", name: 'Firebase', icon: <SiFirebase/>}
+    { name: 'React.Js', icon: <SiReact/>},
+    { name: 'Redux', icon: <SiRedux/>},
+    { name: 'Next.js', icon: <SiNextdotjs/>},
+    { name: 'JavaScript', icon: <SiJavascript/>},
+    { name: 'HTML', icon: <SiHtml5/>},
+    { name: 'CSS', icon: <SiCss3/>},
+    { name: 'Tailwind', icon: <SiTailwindcss/>},
+    { name: 'Material UI', icon: <SiMui/>},
+    { name: 'Bootstrap', icon: <SiBootstrap/>},
+    { name: 'Next.js', icon: <SiNextdotjs/>},
+    // server
+    { name: 'Python', icon: <SiPython/>},
+    { name: 'Node.Js', icon: <FaNode/>},
+    { name: 'Express.Js', icon: <SiExpress/>},
+    { name: 'Socket.IO', icon: <SiSocketdotio/>},
+    // DB
+    { name: 'MongoDB', icon: <SiMongodb/>},
+    { name: 'MySQL', icon: <SiMysql/>},
+    { name: 'Firebase', icon: <SiFirebase/>},
+    { name: 'Google Cloud Storage', icon: <SiGooglecloud/>}
 ]

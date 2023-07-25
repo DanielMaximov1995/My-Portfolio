@@ -49,13 +49,40 @@ const project = {
             title: 'Technology',
             name: 'technology',
             type: 'array',
-            of: [{ type: 'reference', to: { type: 'skills' } }]
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        {
+                            name: 'name',
+                            title: 'Name',
+                            type: 'string',
+                        },
+                    ],
+                },
+                {
+                    type: 'reference',
+                    to: [{ type: 'skills' }],
+                },
+            ],
         },
         {
             name: "content",
             title: "Content",
             type: "array",
-            of: [{ type: "block" }]
+            of: [{ type: "block" }],
+            validation: (Rule) =>
+                Rule.custom((blocks) => {
+                    const totalCharacters = blocks
+                        .map((block) => block.children.map((child) => child.text).join(""))
+                        .join("").length;
+
+                    if (totalCharacters > 130) {
+                        return "Content cannot exceed 100 characters.";
+                    }
+
+                    return true;
+                }),
         }
     ],
 }

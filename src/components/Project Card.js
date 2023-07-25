@@ -1,48 +1,67 @@
 'use client'
 
 import Image from "next/image";
+import Link from "next/link";
 import TooltipBottom from "@/components/TooltipBottom";
 import {SiGithub} from "react-icons/si";
-import {AiOutlineCloudDownload} from "react-icons/ai";
 import Button from "@/components/Button";
-import {MdPreview} from "react-icons/md";
+import {renderBlockContent} from "@/sanity/Render Block Content";
+import {useState} from "react";
+import {VscGithub, VscOpenPreview , VscCloudDownload} from "react-icons/vsc";
+import {techSkills} from "@/components/Technologys";
 
 
-const ProjectCard = ({data}) => {
+const ProjectCard = ({data , skills}) => {
+
     return (
         <div className='max-w-[100%] md:max-h-[100%] bg-customBlue/50 rounded overflow-hidden shadow-lg'>
             <div className='flex md:block md:justify-center'>
-                <div className='md:w-full object-cover'>
-                    <Image src={data.pic} alt='' width={400} height={100} className='w-full h-full object-cover' quality={100} />
+                <div className='md:w-[280px] w-[400px] h-[250px] md:h-[300px] text-center shadow-lg shadow-accent-500/50'>
+                    <Image src={data.image || '/default.jpg'} alt='' width={400} height={400} className='w-full h-full object-cover' quality={100} />
                 </div>
 
-                <div className='px-2 py-4 lg:w-full'>
+                <div className='pl-4 py-4 lg:w-full md:h-[270px]'>
                     <div className="text-center md:text-left font-semibold text-xl mb-2 flex justify-center md:justify-normal">
-                        <p className='tracking-wide capitalize text-white flex'>{data.name} <span className='mx-2'><Button icon={<SiGithub />}/></span></p>
-
+                        <p className='tracking-wide capitalize text-white inline-flex'>
+                            {data.name}
+                        </p>
                     </div>
-                    <p className="text-white text-base mb-3 text-center md:text-left ">
-                        {data.description}
-                    </p>
-                    <div className="mx-auto flex justify-center gap-2">
-                        {data.tech.map((item, index) => {
-                            let icon = <span className='text-2xl lg:text-3xl'>{item.icon}</span>
+                    <div className="text-white text-base mb-3 text-center md:text-left h-[100px]">
+                        {renderBlockContent(data.content)}
+                    </div>
+                    <div className="mx-auto mb-2 flex gap-2 justify-start">
+                        {data.technology.map((item, index) => {
+                            let findSkill = skills.find((skill) => item._ref === skill._id)
+                            let findIcon = techSkills.find(icon => icon.name === findSkill.name)
                             return <div key={index}>
-                                <TooltipBottom title={item.name} content={icon} position='top' />
+                                <TooltipBottom title={findIcon?.name} position='top'>
+                                    <span className='text-2xl lg:text-3xl'>{findIcon?.icon}</span>
+                                </TooltipBottom>
                             </div>
                         })}
                     </div>
 
-                    <div className='flex justify-end md:justify-around'>
-                        <div className='pt-4 inline-flex md:flex md:px-4 gap-2'>
-                            <Button icon={<MdPreview />}>Preview</Button>
-                            <Button icon={<AiOutlineCloudDownload />}>Download</Button>
+                    <div className='flex justify-center md:justify-end z-50'>
+                        <div className='pt-2 inline-flex md:flex md:px-4 gap-2'>
+                            <TooltipBottom title={'Github'} position='top'>
+                                <Button icon={<VscGithub className='text-3xl md:text-inherit'/>}/>
+                            </TooltipBottom>
+                            <TooltipBottom title={'Preview'} position='top'>
+                                <Button icon={<VscOpenPreview className='text-3xl md:text-inherit'/>}/>
+                            </TooltipBottom>
+                                {
+                                    data.file &&
+                                    <Link href={data.file} target={'_blank'}>
+                            <TooltipBottom title={'Download'} position='top'>
+                                        <Button icon={<VscCloudDownload className='text-3xl md:text-inherit'/>}/>
+                            </TooltipBottom>
+                                    </Link>
+                                }
+
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
 
     )

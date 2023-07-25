@@ -52,7 +52,7 @@ const projectsData = [
 ]
 
 const Projects = (props) => {
-    const { projects , content } = props
+    const { projects , content , skills } = props
 
     return (
         <div className='h-full bg-primary/30 md:py-36 pt-36 text-center xl:text-left'>
@@ -69,7 +69,7 @@ const Projects = (props) => {
                 <div className='flex flex-col w-full xl:max-w-[60%] h-[480px] z-50'>
                     <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
                         <div className='w-full z-10'>
-                            <ProjectsSlider data={projectsData}/>
+                            <ProjectsSlider skills={skills} data={projects}/>
                         </div>
                     </div>
                 </div>

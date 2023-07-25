@@ -30,8 +30,6 @@ const Icon = (props) => {
             }
     }, [iconData]);
 
-    console.log(iconData)
-
     return <div
         dangerouslySetInnerHTML={{ __html: iconData }}
     />

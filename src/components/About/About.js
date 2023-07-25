@@ -38,9 +38,9 @@ const About = (props) => {
                     <h2 className='h2 mt-0 md:mt-auto'>
                         {renderBlockContent(content.title)}
                     </h2>
-                    <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-4 px-2 xl:px-0'>
+                    <div className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-4 px-2 xl:px-0'>
                         {renderBlockContent(content.content)}
-                    </p>
+                    </div>
                         <Link href={content.file} target='_blank' className='mb-4'>
                             <Button onClick={handleDownload} classes='bg-accent text-primary' icon={iconButton}>Download Resume</Button>
                         </Link>

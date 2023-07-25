@@ -2,7 +2,7 @@
 export const renderBlockContent = (blocks) => {
     return blocks.map((block) => {
         return (
-            <div key={block._key} className='text-center md:text-left'>
+            <div key={block._key}>
                 {block.children.map((child) => {
                     if (child._type === 'span') {
                         return (

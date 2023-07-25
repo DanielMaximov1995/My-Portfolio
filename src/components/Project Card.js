@@ -12,14 +12,13 @@ const ProjectCard = ({data}) => {
     return (
         <div className='max-w-[100%] md:max-h-[100%] bg-customBlue/50 rounded overflow-hidden shadow-lg'>
             <div className='flex md:block md:justify-center'>
-                {/* Image on the left side (for smaller screens) */}
                 <div className='md:w-full object-cover'>
                     <Image src={data.pic} alt='' width={400} height={100} className='w-full h-full object-cover' quality={100} />
                 </div>
 
                 <div className='px-2 py-4 lg:w-full'>
                     <div className="text-center md:text-left font-semibold text-xl mb-2 flex justify-center md:justify-normal">
-                        <p className='tracking-wide capitalize text-white flex'>{data.name} <span className='m-2'><Button icon={<SiGithub />}/></span></p>
+                        <p className='tracking-wide capitalize text-white flex'>{data.name} <span className='mx-2'><Button icon={<SiGithub />}/></span></p>
 
                     </div>
                     <p className="text-white text-base mb-3 text-center md:text-left ">

@@ -23,14 +23,14 @@ const Icon = (props) => {
     }, [icon]);
 
     useEffect(() => {
-        if (iconData) {
             const svg = new DOMParser().parseFromString(iconData, 'image/svg+xml').querySelector('svg');
             if (svg) {
                 svg.classList.add('fill-white', 'hover:fill-accent' , 'duration-300' , 'transition-all' , 'h-7' , 'w-7' , 'cursor-pointer');
                 setIconData(new XMLSerializer().serializeToString(svg));
             }
-        }
     }, [iconData]);
+
+    console.log(iconData)
 
     return <div
         dangerouslySetInnerHTML={{ __html: iconData }}

@@ -12,10 +12,10 @@ const Home = (props) => {
             <div className='w-full h-full'>
                 <div
                     className='text-center flex flex-col justify-center xl:pt-10 xl:text-left h-screen md:h-full container mx-auto'>
-                    <div className='h1'>
+                    <h1 className='h1 mt-0 md:mt-auto mx-auto md:mx-0'>
                         {renderBlockContent(content.title)}
-                    </div>
-                    <div className='max-w-sm xl:max-w-xl xl:max-0 mx-auto xl:mx-0 mb-10 xl:mb-16'>
+                    </h1>
+                    <div className='max-w-[430px] mx-auto xl:mx-0 mb-6 xl:mb-4 px-2 xl:px-0 text-left'>
                         {renderBlockContent(content.content)}
                     </div>
                     <div className='flex justify-center md:justify-normal relative'>

@@ -1,5 +1,5 @@
 import Projects from "@/components/Projects/Projects";
-import {getProjects} from "@/sanity/sanity-utils";
+import {getPage, getProjects} from "@/sanity/sanity-utils";
 
 export async function generateMetadata({ params }) {
     return {
@@ -9,7 +9,8 @@ export async function generateMetadata({ params }) {
 
 const Page = async () => {
     const projects = await getProjects()
+    let page = await getPage('projects')
 
-    return <Projects projects={projects}/>
+    return <Projects content={page} projects={projects}/>
 }
 export default Page

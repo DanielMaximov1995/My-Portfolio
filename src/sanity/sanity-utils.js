@@ -47,3 +47,18 @@ export const getEducation = async () => {
     }`
     )
 }
+
+export const getPage = async (slug) => {
+    return createClient(config).fetch(
+        groq`*[_type == "page" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      pageName,
+      "slug": slug.current,
+      "image": image.asset->url,
+      "file": file.asset->url + "?dl",
+      title,
+      content,
+    }`,{slug}
+    )
+}

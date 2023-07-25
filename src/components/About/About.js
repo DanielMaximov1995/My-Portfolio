@@ -4,27 +4,46 @@ import Circles from "@/components/Circles";
 import Avatar from "@/components/Avatar";
 import Skills from "@/components/skills";
 import Education from "@/components/education";
+import Button from "@/components/Button";
+import Link from "next/link";
+import Icon from "@/components/Icon";
+import IconButton from "@/components/IconButton";
+import {renderBlockContent} from "@/sanity/Render Block Content";
 
 const aboutData = ['skills', 'education']
 
 const About = (props) => {
-    const {skills , education} = props
+    const {skills , education , content} = props
     const [index, setIndex] = useState(0);
+
+    let iconButton = <IconButton icon={content.image}/>
+
+    const handleDownload = () => {
+        // fetch(content.file).then((response) => {
+        //     response.blob().then((blob) => {
+        //         let url = window.URL.createObjectURL(blob);
+        //         let a = document.createElement("a");
+        //         a.href = url;
+        //         a.download
+        //         a.click();
+        //     });
+        // });
+    };
 
     return (
         <div className='h-full bg-primary/30 md:py-36 pt-36 text-center xl:text-left'>
             <Circles />
-            <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
+            <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 z-50'>
                 <div className='flex-1 flex flex-col justify-center'>
                     <h2 className='h2 mt-0 md:mt-auto'>
-                        Tech Enthusiast 🧑‍💻 <br className='hidden md:block' /> Master of <span className='text-accent'>Full-Stack</span>
+                        {renderBlockContent(content.title)}
                     </h2>
-                    <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
-                        As an enthusiastic tech developer, I take pride in my impressive portfolio of <span className='text-accent font-semibold'>11 Full-Stack
-                        projects.</span>
-                        Proficient in <span className='text-accent font-semibold'>React.js, Next.Js, NodeJS, and Python,</span> I&apos;m passionate about writing
-                        clean code.
+                    <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-4 px-2 xl:px-0'>
+                        {renderBlockContent(content.content)}
                     </p>
+                        <Link href={content.file} target='_blank' className='mb-4'>
+                            <Button onClick={handleDownload} classes='bg-accent text-primary' icon={iconButton}>Download Resume</Button>
+                        </Link>
                 </div>
                 <div className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
                     <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
@@ -40,7 +59,7 @@ const About = (props) => {
                             })
                         }
                     </div>
-                    <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
+                    <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start z-50'>
                         {index === 0 && <Skills skills={skills}/>}
                         {index === 1 && <Education education={education}/>}
                     </div>

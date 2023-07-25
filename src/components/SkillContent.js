@@ -1,5 +1,4 @@
 'use client'
-import { theme } from '../../tailwind.config'
 import TooltipBottom from "@/components/TooltipBottom";
 import Icon from "@/components/Icon";
 

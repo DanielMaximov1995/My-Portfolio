@@ -8,9 +8,9 @@ const config = defineConfig({
     title: 'Portfolio Project',
     apiVersion : '2023-07-24',
     basePath : '/admin',
-    useCdn : false ,
+    useCdn : true ,
     plugins: [deskTool()],
-    schema : { types : schemas}
+    schema : { types : schemas},
 })
 
 export default config

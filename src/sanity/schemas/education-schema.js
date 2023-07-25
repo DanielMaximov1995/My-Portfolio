@@ -1,4 +1,4 @@
-import {techSkills} from "@/components/Technologys";
+import {BiBold, BiFontColor, BiHighlight} from "react-icons/bi";
 
 const education = {
     name: "education",
@@ -30,7 +30,24 @@ const education = {
             name: "content",
             title: "Content",
             type: "array",
-            of: [{ type: "block" }]
+            of: [{ type: "block" , marks : {
+                    decorators: [
+                        { title: 'Strong', value: 'font-semibold', blockEditor: { icon : <BiBold/> , render : ({children}) => <span className='font-semibold'>{children}</span> } },
+                        { title: 'Emphasis', value: 'italic' , blockEditor: { icon : '' , render : ({children}) => <span className='italic'>{children}</span> } },
+                        { title: 'Highlight', value: 'bg-accent bg-opacity-75' , blockEditor: {
+                                icon : <BiHighlight/>,
+                                render : ({children}) => <span className='bg-accent bg-opacity-75'>{children}</span>
+                            } },
+                        {
+                            title: "Text Theme",
+                            value: "text-accent",
+                            blockEditor: {
+                                icon: <BiFontColor/>,
+                                render: ({ children }) => <span className='text-accent'>{children}</span>
+                            }
+                        },
+                    ],
+                } } ]
         },
         {
             title: 'Start date',

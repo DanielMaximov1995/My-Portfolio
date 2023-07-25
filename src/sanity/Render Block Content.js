@@ -2,11 +2,11 @@
 export const renderBlockContent = (blocks) => {
     return blocks.map((block) => {
         return (
-            <div key={block._key}>
+            <div key={block._key} className='text-center md:text-left'>
                 {block.children.map((child) => {
                     if (child._type === 'span') {
                         return (
-                            <span key={child._key} className={getChildClassNames(child.marks)}>
+                            <span key={child._key} className={child.marks.join(" ")}>
                                 {child.text}
                             </span>
                         );
@@ -19,13 +19,7 @@ export const renderBlockContent = (blocks) => {
 };
 
 const getChildClassNames = (marks) => {
-    // Handle custom marks, if any
-    // (e.g., 'strong' and 'code' in your provided block content)
-    const customMarks = marks.filter((mark) => mark !== 'strong' && mark !== 'code');
-    const customClassNames = customMarks.map((mark) => `custom-mark-${mark}`);
+    const customClassNames = customMarks.map((mark) => `${mark}`);
 
-    // Combine the custom class names with any default marks (e.g., 'strong', 'code')
-    const defaultClassNames = marks.filter((mark) => mark === 'strong' || mark === 'code');
-
-    return [...defaultClassNames, ...customClassNames].join(' ');
+    return [...customClassNames].join(' ');
 };

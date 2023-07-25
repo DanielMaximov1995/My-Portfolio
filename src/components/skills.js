@@ -1,23 +1,5 @@
 'use client'
-
-import {FaNode} from "react-icons/fa";
-import {
-    SiBootstrap,
-    SiCss3,
-    SiExpress,
-    SiFirebase,
-    SiHtml5,
-    SiJavascript,
-    SiMongodb,
-    SiMui,
-    SiMysql,
-    SiNextdotjs,
-    SiReact,
-    SiSocketdotio,
-    SiTailwindcss
-} from "react-icons/si";
 import {useState} from "react";
-import TooltipBottom from "@/components/TooltipBottom";
 import SkillContent from "@/components/SkillContent";
 
 const Skills = (props) => {

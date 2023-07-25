@@ -67,13 +67,16 @@ const Projects = (props) => {
                         for innovation and enhancing user experiences.
                     </p>
                 </div>
-                <div className='flex flex-col w-full xl:max-w-[65%] h-[480px]'>
+                <div className='flex flex-col w-full xl:max-w-[65%] h-[480px] z-50'>
                     <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
                         <div className='w-full z-10'>
                             <ProjectsSlider data={projectsData}/>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='-z-10'>
+                <Bulb/>
             </div>
         </div>
     )

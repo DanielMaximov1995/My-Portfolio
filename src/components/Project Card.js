@@ -16,7 +16,7 @@ const ProjectCard = ({data , skills}) => {
     return (
         <div className='max-w-[100%] md:max-h-[100%] bg-customBlue/50 rounded overflow-hidden shadow-lg'>
             <div className='flex md:block md:justify-center'>
-                <div className='md:w-[400px] w-[300px] h-[270px] md:h-[300px] text-center shadow-lg shadow-accent-500/50'>
+                <div className='md:w-[400px] w-[300px] h-[260px] md:h-[300px] text-center shadow-lg shadow-accent-500/50'>
                     <Image src={data.image || '/default.jpg'} alt='' width={400} height={400} className='w-full h-full object-cover' quality={100} />
                 </div>
 
@@ -48,9 +48,9 @@ const ProjectCard = ({data , skills}) => {
                                 <Button icon={<VscGithub className='text-3xl md:text-inherit'/>}/>
                                     </Link>
                             </TooltipBottom>
-                            <TooltipBottom title={'Preview'} position='top'>
-                                <Button icon={<VscOpenPreview className='text-3xl md:text-inherit'/>}/>
-                            </TooltipBottom>
+                            {/*<TooltipBottom title={'Preview'} position='top'>*/}
+                            {/*    <Button icon={<VscOpenPreview className='text-3xl md:text-inherit'/>}/>*/}
+                            {/*</TooltipBottom>*/}
                                 {
                                     data.file &&
                                     <Link href={data.file} target={'_blank'}>
@@ -59,7 +59,6 @@ const ProjectCard = ({data , skills}) => {
                             </TooltipBottom>
                                     </Link>
                                 }
-
                         </div>
                     </div>
                 </div>

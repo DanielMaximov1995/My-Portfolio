@@ -24,7 +24,7 @@ const ProjectsSlider = ({data , skills}) => {
         freeMode={true}
         pagination={{ clickable : true }}
         modules={[FreeMode , Pagination]}
-        className='h-[280px] sm:h-[620px] md:w-[950px]'
+        className='h-[300px] sm:h-[620px] md:w-[950px]'
     >
         {
             data?.map((item , index) => {

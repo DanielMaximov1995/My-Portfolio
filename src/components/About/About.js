@@ -9,6 +9,7 @@ import Link from "next/link";
 import Icon from "@/components/Icon";
 import IconButton from "@/components/IconButton";
 import {renderBlockContent} from "@/sanity/Render Block Content";
+import Image from "next/image";
 
 const aboutData = ['skills', 'education']
 
@@ -16,19 +17,9 @@ const About = (props) => {
     const {skills , education , content} = props
     const [index, setIndex] = useState(0);
 
-    let iconButton = <IconButton icon={content.image}/>
+    let iconButton = <Image src={content.image} alt='Download Daniel Maximov Resume' width={30} height={30}/>
 
-    const handleDownload = () => {
-        // fetch(content.file).then((response) => {
-        //     response.blob().then((blob) => {
-        //         let url = window.URL.createObjectURL(blob);
-        //         let a = document.createElement("a");
-        //         a.href = url;
-        //         a.download
-        //         a.click();
-        //     });
-        // });
-    };
+
 
     return (
         <div className='h-full bg-primary/30 md:py-36 pt-36 text-center xl:text-left'>
@@ -42,7 +33,7 @@ const About = (props) => {
                         {renderBlockContent(content.content)}
                     </div>
                         <Link href={content.file} target='_blank' className='mb-4'>
-                            <Button onClick={handleDownload} classes='bg-accent text-primary' icon={iconButton}>Download Resume</Button>
+                            <Button classes='bg-accent text-primary' icon={iconButton}>Download Resume</Button>
                         </Link>
                 </div>
                 <div className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>

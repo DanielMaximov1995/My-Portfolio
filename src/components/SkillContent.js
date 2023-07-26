@@ -1,6 +1,7 @@
 'use client'
 import TooltipBottom from "@/components/TooltipBottom";
 import Icon from "@/components/Icon";
+import {techSkills} from "@/components/Technologys";
 
 const SkillContent = (props) => {
     const { setIndex , index , indexComp , title , data } = props
@@ -20,13 +21,13 @@ const SkillContent = (props) => {
                 onMouseEnter={() => setIndex(indexComp)}
                 onMouseLeave={() => setIndex(null)}
             >
-                {data.map((techSkill, techIndex) => {
-                    let icon = <div className='h-6 w-6 hover:text-accent'>
-                        <Icon icon={techSkill.icon}/>
-                    </div>
+                {data.map((skill, techIndex) => {
+                    let findIcon = techSkills.find(icon => icon.name === skill.name)
                     return (
                         <div key={techIndex}>
-                            <TooltipBottom title={techSkill.name} content={icon} className='text-accent'/>
+                            <TooltipBottom title={findIcon?.name} className='text-accent'>
+                            <span className='h-4 w-4'>{findIcon?.icon}</span>
+                            </TooltipBottom>
                         </div>
                     );
                 })}

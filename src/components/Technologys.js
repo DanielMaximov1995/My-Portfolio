@@ -6,17 +6,17 @@ import {
     SiJavascript,
     SiMongodb,
     SiMui, SiMysql,
-    SiNextdotjs, SiPython,
+    SiNextdotjs, SiNodedotjs, SiPython,
     SiReact, SiRedux, SiSocketdotio,
-    SiTailwindcss
+    SiTailwindcss, SiTypescript
 } from "react-icons/si";
-import {FaNode} from "react-icons/fa";
 
 export const techSkills = [
     { name: 'React.Js', icon: <SiReact/>},
     { name: 'Redux', icon: <SiRedux/>},
-    { name: 'Next.js', icon: <SiNextdotjs/>},
+    { name: 'Next.Js', icon: <SiNextdotjs/>},
     { name: 'JavaScript', icon: <SiJavascript/>},
+    { name: 'TypeScript', icon: <SiTypescript/>},
     { name: 'HTML', icon: <SiHtml5/>},
     { name: 'CSS', icon: <SiCss3/>},
     { name: 'Tailwind', icon: <SiTailwindcss/>},
@@ -25,9 +25,9 @@ export const techSkills = [
     { name: 'Next.js', icon: <SiNextdotjs/>},
     // server
     { name: 'Python', icon: <SiPython/>},
-    { name: 'Node.Js', icon: <FaNode/>},
+    { name: 'Node.Js', icon: <SiNodedotjs/>},
     { name: 'Express.Js', icon: <SiExpress/>},
-    { name: 'Socket.IO', icon: <SiSocketdotio/>},
+    { name: 'Socket.Io', icon: <SiSocketdotio/>},
     // DB
     { name: 'MongoDB', icon: <SiMongodb/>},
     { name: 'MySQL', icon: <SiMysql/>},

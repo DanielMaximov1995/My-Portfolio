@@ -17,7 +17,7 @@ const SkillContent = (props) => {
 
             </div>
             <div
-                className='my-5 flex flex-wrap items-center gap-x-5'
+                className='py-5 flex flex-wrap items-center gap-x-4'
                 onMouseEnter={() => setIndex(indexComp)}
                 onMouseLeave={() => setIndex(null)}
             >

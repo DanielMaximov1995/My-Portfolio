@@ -10,6 +10,7 @@ export const getProjects = async () => {
       "slug": slug.current,
       "image": image.asset->url,
       git,
+      url,
       order,
       technology,
       "file": file.asset->url,

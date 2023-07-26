@@ -40,6 +40,11 @@ const project = {
             type: "url"
         },
         {
+            name: "url",
+            title: "Preview url",
+            type: "url"
+        },
+        {
             name: "file",
             title: "File",
             type: "file",

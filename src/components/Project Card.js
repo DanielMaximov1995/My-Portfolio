@@ -48,9 +48,14 @@ const ProjectCard = ({data , skills}) => {
                                 <Button icon={<VscGithub className='text-3xl md:text-inherit'/>}/>
                                     </Link>
                             </TooltipBottom>
-                            {/*<TooltipBottom title={'Preview'} position='top'>*/}
-                            {/*    <Button icon={<VscOpenPreview className='text-3xl md:text-inherit'/>}/>*/}
-                            {/*</TooltipBottom>*/}
+                            {
+                                data?.url &&
+                                <Link href={data.url} target='_blank'}>
+                                    <TooltipBottom title={'Preview'} position='top'>
+                                        <Button icon={<VscOpenPreview className='text-3xl md:text-inherit'/>}/>
+                                    </TooltipBottom>
+                                </Link>
+                            }
                                 {
                                     data.file &&
                                     <Link href={data.file} target={'_blank'}>

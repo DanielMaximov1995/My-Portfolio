@@ -7,6 +7,8 @@ export async function generateMetadata({ params }) {
     }
 }
 
+export const revalidate = 60
+
 const Page = async () => {
     let skills = await getSkills()
     let education = await getEducation()

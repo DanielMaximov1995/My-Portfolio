@@ -44,7 +44,9 @@ const ProjectCard = ({data , skills}) => {
                     <div className='flex justify-center md:justify-end z-50'>
                         <div className='pt-2 inline-flex md:flex md:px-4 gap-2'>
                             <TooltipBottom title={'Github'} position='top'>
+                                    <Link href={data.git} target={'_blank'}>
                                 <Button icon={<VscGithub className='text-3xl md:text-inherit'/>}/>
+                                    </Link>
                             </TooltipBottom>
                             <TooltipBottom title={'Preview'} position='top'>
                                 <Button icon={<VscOpenPreview className='text-3xl md:text-inherit'/>}/>

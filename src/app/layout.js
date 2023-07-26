@@ -10,6 +10,25 @@ export const metadata = {
         template: '%s • Daniel Maximov • Full Stack Developer',
     },
     description: 'Highly skilled and talented individual proficient in crafting web magic. Specializes in building seamless applications using React, NodeJS, and Next.Js. Let\'s collaborate to bring your ideas to life and create extraordinary online experiences together! Seeking new work opportunities. ✨',
+    openGraph: {
+        images: ['/Daniel Maximov.png'],
+    },
+    keywords: ['Next.js', 'React', 'Node' , 'javascript'],
+    authors: [{ name: 'Daniel' }, { name: 'Maximov', url: 'https://daniel-maximov.vercel.app/' }],
+    url: 'https://daniel-maximov.vercel.app/',
+    images: [
+        {
+            url: '/Daniel Maximov.png',
+            width: 800,
+            height: 600,
+        },
+        {
+            url: '/Daniel Maximov.png',
+            width: 1800,
+            height: 1600,
+            alt: 'My custom alt',
+        },
+    ],
 }
 
 export default function RootLayout({children}) {

@@ -51,6 +51,19 @@ const project = {
             options: { hotspot: true },
         },
         {
+            name: "phone",
+            title: "Phone",
+            type: "boolean",
+        },{
+            name: "tablet",
+            title: "Tablet",
+            type: "boolean",
+        },{
+            name: "pc",
+            title: "PC",
+            type: "boolean",
+        },
+        {
             title: 'Technology',
             name: 'technology',
             type: 'array',

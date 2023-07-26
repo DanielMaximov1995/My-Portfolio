@@ -3,12 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import TooltipBottom from "@/components/TooltipBottom";
-import {SiGithub} from "react-icons/si";
 import Button from "@/components/Button";
 import {renderBlockContent} from "@/sanity/Render Block Content";
-import {useState} from "react";
 import {VscGithub, VscOpenPreview , VscCloudDownload} from "react-icons/vsc";
 import {techSkills} from "@/components/Technologys";
+import {MdLaptopChromebook, MdOutlinePhoneAndroid, MdOutlineTablet} from "react-icons/md";
 
 
 const ProjectCard = ({data , skills}) => {
@@ -16,8 +15,8 @@ const ProjectCard = ({data , skills}) => {
     return (
         <div className='max-w-[100%] md:max-h-[100%] bg-customBlue/50 rounded overflow-hidden shadow-lg'>
             <div className='flex md:block md:justify-center'>
-                <div className='md:w-[400px] w-[300px] h-[260px] md:h-[300px] text-center shadow-lg shadow-accent-500/50'>
-                    <Image src={data.image || '/default.jpg'} alt='' width={400} height={400} className='w-full h-full object-cover' quality={100} />
+                <div className='md:w-[420px] w-[300px] h-[260px] md:h-[300px] text-center shadow-lg shadow-accent-500/50'>
+                    <Image src={data.image || '/default.jpg'} alt={`${data.name} - developed by daniel maximov`} width={400} height={400} className='w-full h-full object-cover' quality={100} />
                 </div>
 
                 <div className='pl-4 py-4 lg:w-full md:h-[270px]'>
@@ -41,7 +40,25 @@ const ProjectCard = ({data , skills}) => {
                         })}
                     </div>
 
-                    <div className='flex justify-end z-50'>
+
+                    <div className='flex justify-between z-50'>
+                        <div className='md:pt-4 inline-flex md:flex md:px-4 gap-2'>
+                            {
+                                data.pc && <TooltipBottom title={'PC'} position='top'>
+                                    <MdLaptopChromebook className='text-xl md:text-inherit'/>
+                                </TooltipBottom>
+                            }
+                            {
+                                data.tablet && <TooltipBottom title={'Tablet'} position='top'>
+                                    <MdOutlineTablet className='text-xl md:text-inherit'/>
+                                </TooltipBottom>
+                            }
+                            {
+                                data.phone && <TooltipBottom title={'Smartphone'} position='top'>
+                                    <MdOutlinePhoneAndroid className='text-xl md:text-inherit'/>
+                                </TooltipBottom>
+                            }
+                        </div>
                         <div className='md:pt-2 inline-flex md:flex md:px-4 gap-2'>
                             <TooltipBottom title={'Github'} position='top'>
                                     <Link href={data.git} target={'_blank'}>
@@ -50,7 +67,7 @@ const ProjectCard = ({data , skills}) => {
                             </TooltipBottom>
                             {
                                 data?.url &&
-                                <Link href={data.url} target='_blank'}>
+                                <Link href={data.url} target='_blank'>
                                     <TooltipBottom title={'Preview'} position='top'>
                                         <Button icon={<VscOpenPreview className='text-3xl md:text-inherit'/>}/>
                                     </TooltipBottom>

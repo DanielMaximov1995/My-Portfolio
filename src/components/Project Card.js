@@ -15,7 +15,7 @@ const ProjectCard = ({data , skills}) => {
     return (
         <div className='max-w-[100%] md:max-h-[100%] bg-customBlue/50 rounded overflow-hidden shadow-lg'>
             <div className='flex md:block md:justify-center'>
-                <div className='md:w-[310px] w-[300px] h-[260px] md:h-[280px] text-center shadow-lg shadow-accent-500/50'>
+                <div className='md:w-[310px] w-[300px] h-[240px] md:h-[280px] text-center shadow-lg shadow-accent-500/50 mix-blend-overlay'>
                     <Image src={data.image || '/default.jpg'} alt={`${data.name} - developed by daniel maximov`} width={400} height={400} className='w-full h-full object-cover' quality={100} />
                 </div>
 

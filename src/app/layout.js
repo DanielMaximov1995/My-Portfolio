@@ -11,6 +11,7 @@ export const metadata = {
     },
     description: 'Highly skilled and talented individual proficient in crafting web magic. Specializes in building seamless applications using React, NodeJS, and Next.Js. Let\'s collaborate to bring your ideas to life and create extraordinary online experiences together! Seeking new work opportunities. ✨',
     openGraph: {
+        title: 'Daniel Maximov • Full Stack Developer',
         images: ['/Daniel Maximov.png'],
     },
     keywords: ['Next.js', 'React', 'Node' , 'javascript'],

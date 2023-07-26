@@ -11,6 +11,10 @@
   background-color: #97c3ff;
 }
 
+.z-max {
+  z-index: 99999;
+}
+
 .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-button-next:after,

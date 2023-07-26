@@ -1,5 +1,4 @@
 'use client'
-
 import Circles from "@/components/Circles";
 import Bulb from "@/components/Bulb";
 import React, {useState} from "react";
@@ -9,73 +8,30 @@ import ProjectsSlider from "@/components/ProjectsSlider";
 import { techSkills} from "@/components/Technologys";
 import {renderBlockContent} from "@/sanity/Render Block Content";
 
-const projectsData = [
-    {
-        name: 'title1',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et\n' +
-            '                    perferendis eaque, exercitationem praesentium nihil.',
-        tech: [{name: 'React.Js', icon: <SiReact/>}, {name: 'Node.Js', icon: <FaNode/>}, {
-            name: 'MongoDB',
-            icon: <SiMongodb/>
-        }, {
-            name: 'Express.Js',
-            icon: <SiExpress/>
-        }],
-        pic: '/thumb1.jpg',
-        git: '',
-        download: ''
-    },
-    {
-        name: 'title2',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et\n' +
-            '                    perferendis eaque, exercitationem praesentium nihil.',
-        tech: [{name: 'Next.Js', icon: <SiNextdotjs/>}, {
-            name: 'MongoDB',
-            icon: <SiMongodb/>
-        }],
-        pic: '/thumb2.jpg',
-        git: '',
-        download: ''
-    },
-    {
-        name: 'title3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et\n' +
-            '                    perferendis eaque, exercitationem praesentium nihil.',
-        tech: [{name: 'Next.Js', icon: <SiNextdotjs/>}, {
-            name: 'MongoDB',
-            icon: <SiMongodb/>
-        }],
-        pic: '/thumb3.jpg',
-        git: '',
-        download: ''
-    },
-]
-
 const Projects = (props) => {
     const { projects , content , skills } = props
-
+    let sortProject = projects.sort((a,b) => b.order - a.order)
     return (
         <div className='h-full bg-primary/30 md:py-36 pt-36 text-center xl:text-left'>
-            <Circles/>
-            <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
+            <Circles />
+            <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 z-50'>
                 <div className='flex-1 flex flex-col justify-center'>
-                    <h2 className='h2 md:mt-0 mt-4'>
+                    <h2 className='h2 mt-0 md:mt-auto'>
                         {renderBlockContent(content.title)}
                     </h2>
                     <div className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-4 px-2 xl:px-0'>
                         {renderBlockContent(content.content)}
                     </div>
                 </div>
-                <div className='flex flex-col w-full xl:max-w-[60%] h-[480px] z-50'>
-                    <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
-                        <div className='w-full z-10'>
-                            <ProjectsSlider skills={skills} data={projects}/>
+                <div className='flex flex-col w-full xl:max-w-[60%] h-[480px]'>
+                    <div className='flex flex-col w-full xl:max-w-[60%] h-[480px] z-50'>
+                        <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
+                            <div className='w-full z-10'>
+                                <ProjectsSlider skills={skills} data={sortProject}/>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='-z-10'>
-                <Bulb/>
             </div>
         </div>
     )

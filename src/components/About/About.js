@@ -19,8 +19,6 @@ const About = (props) => {
 
     let iconButton = <Image src={content.image} alt='Download Daniel Maximov Resume' width={30} height={30}/>
 
-
-
     return (
         <div className='h-full bg-primary/30 md:py-36 pt-36 text-center xl:text-left'>
             <Circles />

@@ -16,7 +16,7 @@ const ProjectCard = ({data , skills}) => {
     return (
         <div className='max-w-[100%] md:max-h-[100%] bg-customBlue/50 rounded overflow-hidden shadow-lg'>
             <div className='flex md:block md:justify-center'>
-                <div className='md:w-[280px] w-[400px] h-[250px] md:h-[300px] text-center shadow-lg shadow-accent-500/50'>
+                <div className='md:w-[400px] w-[400px] h-[240px] md:h-[300px] text-center shadow-lg shadow-accent-500/50'>
                     <Image src={data.image || '/default.jpg'} alt='' width={400} height={400} className='w-full h-full object-cover' quality={100} />
                 </div>
 
@@ -26,7 +26,7 @@ const ProjectCard = ({data , skills}) => {
                             {data.name}
                         </p>
                     </div>
-                    <div className="text-white text-base mb-3 text-center md:text-left h-[100px]">
+                    <div className="text-white text-base mb-3 text-center md:text-left md:h-[100px]">
                         {renderBlockContent(data.content)}
                     </div>
                     <div className="mx-auto mb-2 flex gap-2 justify-start">
@@ -41,8 +41,8 @@ const ProjectCard = ({data , skills}) => {
                         })}
                     </div>
 
-                    <div className='flex justify-center md:justify-end z-50'>
-                        <div className='pt-2 inline-flex md:flex md:px-4 gap-2'>
+                    <div className='flex justify-end z-50'>
+                        <div className='md:pt-2 inline-flex md:flex md:px-4 gap-2'>
                             <TooltipBottom title={'Github'} position='top'>
                                     <Link href={data.git} target={'_blank'}>
                                 <Button icon={<VscGithub className='text-3xl md:text-inherit'/>}/>

@@ -12,7 +12,7 @@ const Projects = (props) => {
     const { projects , content , skills } = props
     let sortProject = projects.sort((a,b) => b.order - a.order)
     return (
-        <div className='h-full bg-primary/30 md:py-36 pt-36 text-center xl:text-left'>
+        <div className='h-full bg-primary/30 md:py-20 pt-36 text-center xl:text-left'>
             <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 z-50'>
                 <div className='flex-1 flex flex-col justify-center'>
                     <h2 className='h2 mt-0 md:mt-auto'>

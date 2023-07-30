@@ -15,7 +15,7 @@ const ProjectCard = ({data , skills}) => {
     return (
         <div className='max-w-[100%] md:max-h-[100%] bg-customBlue/50 rounded overflow-hidden shadow-lg'>
             <div className='flex md:block md:justify-center'>
-                <div className='md:w-[310px] w-[300px] h-[240px] md:h-[280px] text-center shadow-lg shadow-accent-500/50 mix-blend-overlay'>
+                <div className='md:w-[310px] w-[300px] h-[240px] md:h-[250px] text-center shadow-lg shadow-accent-500/50 mix-blend-overlay'>
                     <Image src={data.image || '/default.jpg'} alt={`${data.name} - developed by daniel maximov`} width={400} height={400} className='w-full h-full object-cover' quality={100} />
                 </div>
 
@@ -34,7 +34,7 @@ const ProjectCard = ({data , skills}) => {
                             let findIcon = techSkills.find(icon => icon.name === findSkill.name)
                             return <div key={index}>
                                 <TooltipBottom title={findIcon?.name} position='top'>
-                                    <span className='text-2xl lg:text-3xl'>{findIcon?.icon}</span>
+                                    <span className='text-2xl lg:text-2xl'>{findIcon?.icon}</span>
                                 </TooltipBottom>
                             </div>
                         })}
@@ -45,31 +45,31 @@ const ProjectCard = ({data , skills}) => {
                         <div className='md:pt-4 inline-flex md:flex md:px-4 gap-2'>
                             {
                                 data.pc && <TooltipBottom title={'PC'} position='top'>
-                                    <MdLaptopChromebook className='text-xl md:text-inherit'/>
+                                    <MdLaptopChromebook className='text-xl md:text-xl'/>
                                 </TooltipBottom>
                             }
                             {
                                 data.tablet && <TooltipBottom title={'Tablet'} position='top'>
-                                    <MdOutlineTablet className='text-xl md:text-inherit'/>
+                                    <MdOutlineTablet className='text-xl md:text-xl'/>
                                 </TooltipBottom>
                             }
                             {
                                 data.phone && <TooltipBottom title={'Smartphone'} position='top'>
-                                    <MdOutlinePhoneAndroid className='text-xl md:text-inherit'/>
+                                    <MdOutlinePhoneAndroid className='text-xl md:text-xl'/>
                                 </TooltipBottom>
                             }
                         </div>
                         <div className='md:pt-2 inline-flex md:flex md:px-4 gap-2'>
                             <TooltipBottom title={'Github'} position='top'>
                                     <Link href={data.git} target={'_blank'}>
-                                <Button icon={<VscGithub className='text-3xl md:text-inherit'/>}/>
+                                <Button icon={<VscGithub className='text-3xl md:text-xl'/>}/>
                                     </Link>
                             </TooltipBottom>
                             {
                                 data?.url &&
                                 <Link href={data.url} target='_blank'>
                                     <TooltipBottom title={'Preview'} position='top'>
-                                        <Button icon={<VscOpenPreview className='text-3xl md:text-inherit'/>}/>
+                                        <Button icon={<VscOpenPreview className='text-3xl md:text-xl'/>}/>
                                     </TooltipBottom>
                                 </Link>
                             }
@@ -77,7 +77,7 @@ const ProjectCard = ({data , skills}) => {
                                     data.file &&
                                     <Link href={data.file} target={'_blank'}>
                             <TooltipBottom title={'Download'} position='top'>
-                                        <Button icon={<VscCloudDownload className='text-3xl md:text-inherit'/>}/>
+                                        <Button icon={<VscCloudDownload className='text-3xl md:text-xl'/>}/>
                             </TooltipBottom>
                                     </Link>
                                 }

@@ -1,6 +1,8 @@
 import './globals.css'
 import {Assistant} from 'next/font/google'
 import Layout from "@/components/Layout/Layout";
+import GoogleAnalytics from "@/components/Google Analytics/Google Analytics";
+import CookieBanner from "@/components/Google Analytics/Cookie Banner";
 
 const inter = Assistant({subsets: ['latin']})
 
@@ -35,6 +37,7 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
+        <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}/>
         <body className={`${inter.className}`} suppressHydrationWarning={true}>
             <Layout>
                     {children}

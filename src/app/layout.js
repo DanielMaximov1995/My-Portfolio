@@ -2,7 +2,6 @@ import './globals.css'
 import {Assistant} from 'next/font/google'
 import Layout from "@/components/Layout/Layout";
 import GoogleAnalytics from "@/components/Google Analytics/Google Analytics";
-import CookieBanner from "@/components/Google Analytics/Cookie Banner";
 
 const inter = Assistant({subsets: ['latin']})
 

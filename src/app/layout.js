@@ -15,6 +15,9 @@ export const metadata = {
         title: 'Daniel Maximov • Full Stack Developer',
         images: ['/Daniel maximov.jpg'],
     },
+    verification: {
+        google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFY,
+    },
     keywords: ['Next.js', 'React', 'Node' , 'javascript'],
     authors: [{ name: 'Daniel' }, { name: 'Maximov', url: 'https://daniel-maximov.vercel.app/' }],
     url: 'https://daniel-maximov.vercel.app/',

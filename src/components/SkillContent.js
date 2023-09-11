@@ -23,6 +23,7 @@ const SkillContent = (props) => {
             >
                 {data.map((skill, techIndex) => {
                     let findIcon = techSkills.find(icon => icon.name === skill.name)
+                    console.log(skill)
                     return (
                         <div key={techIndex} className='mb-2'>
                             <TooltipBottom title={findIcon?.name} className='text-accent'>

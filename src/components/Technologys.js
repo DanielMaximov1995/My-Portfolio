@@ -1,18 +1,22 @@
 import {
-    SiBootstrap,
+    SiAngular,
+    SiBootstrap, SiCplusplus, SiCsharp,
     SiCss3,
     SiExpress, SiFirebase, SiGooglecloud,
     SiHtml5,
     SiJavascript,
     SiMongodb,
-    SiMui, SiMysql,
+    SiMui, SiMysql, SiNestjs,
     SiNextdotjs, SiNodedotjs, SiPython,
     SiReact, SiRedux, SiSocketdotio,
-    SiTailwindcss, SiTypescript
+    SiTailwindcss, SiTypescript, SiVuedotjs
 } from "react-icons/si";
+import {FaJava} from "react-icons/fa";
 
 export const techSkills = [
     { name: 'React.Js', icon: <SiReact/>},
+    { name: 'Angular', icon: <SiAngular/>},
+    { name: 'Vue.js', icon:  <SiVuedotjs/>},
     { name: 'Redux', icon: <SiRedux/>},
     { name: 'Next.Js', icon: <SiNextdotjs/>},
     { name: 'JavaScript', icon: <SiJavascript/>},
@@ -25,6 +29,10 @@ export const techSkills = [
     { name: 'Next.js', icon: <SiNextdotjs/>},
     // server
     { name: 'Python', icon: <SiPython/>},
+    { name: 'C#', icon: <SiCsharp/>},
+    { name: 'C++', icon: <SiCplusplus/>},
+    { name: 'Java', icon: <FaJava/>},
+    { name: 'Nest.js', icon: <SiNestjs/>},
     { name: 'Node.Js', icon: <SiNodedotjs/>},
     { name: 'Express.Js', icon: <SiExpress/>},
     { name: 'Socket.Io', icon: <SiSocketdotio/>},

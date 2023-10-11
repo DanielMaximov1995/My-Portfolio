@@ -9,7 +9,7 @@ import {
     SiMui, SiMysql, SiNestjs,
     SiNextdotjs, SiNodedotjs, SiPython,
     SiReact, SiRedux, SiSocketdotio,
-    SiTailwindcss, SiTypescript, SiVuedotjs
+    SiTailwindcss, SiTypescript, SiVuedotjs,SiAmazonaws
 } from "react-icons/si";
 import {FaJava} from "react-icons/fa";
 
@@ -40,5 +40,6 @@ export const techSkills = [
     { name: 'MongoDB', icon: <SiMongodb/>},
     { name: 'MySQL', icon: <SiMysql/>},
     { name: 'Firebase', icon: <SiFirebase/>},
-    { name: 'Google Cloud Storage', icon: <SiGooglecloud/>}
+    { name: 'Google Cloud Storage', icon: <SiGooglecloud/>},
+    { name: 'AWS', icon: <SiAmazonaws/>},
 ]

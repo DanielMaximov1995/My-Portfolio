@@ -19,7 +19,7 @@ const ProjectCard = ({data , skills}) => {
                     <Image src={data.image || '/default.jpg'} alt={`${data.name} - developed by daniel maximov`} width={400} height={400} className='w-full h-full object-cover' quality={100} />
                 </div>
 
-                <div className='pl-4 py-4 lg:w-full md:h-[270px]'>
+                <div className='pl-2 py-4 lg:w-full md:h-[270px]'>
                     <div className="text-center md:text-left font-semibold text-xl mb-2 flex justify-center md:justify-normal">
                         <p className='tracking-wide capitalize text-white inline-flex'>
                             {data.name}

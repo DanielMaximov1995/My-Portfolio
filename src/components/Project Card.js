@@ -25,7 +25,7 @@ const ProjectCard = ({data , skills}) => {
                             {data.name}
                         </p>
                     </div>
-                    <div className="text-white text-base mb-3 text-center md:text-left md:h-[100px]">
+                    <div className="text-white text-base m-1 text-center md:text-left md:h-[100px]">
                         {renderBlockContent(data.content)}
                     </div>
                     <div className="mx-auto mb-2 flex gap-2 justify-start">
